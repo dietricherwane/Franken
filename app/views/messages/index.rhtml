@@ -1,0 +1,21 @@
+<h1>Users list</h1>
+<table id="hor-zebra">
+  <tr>
+    <th scope="col">Sender</th>
+    <th scope="col">Receiver</th>
+    <th scope="col">Content</th>
+  </tr>
+
+<% @messages.each do |message| %>
+  <% if @tab_color %>
+  <tr class="odd">
+  <% else %>
+  <tr>
+  <% end %>
+    <td><%= message.user.username %></td>
+    <td><%= User.find_by_phone_number(message.receiver).username %></td>
+    <td><%= message.content %></td>
+    <% @tab_color = !@tab_color %>
+  </tr>
+<% end %>
+</table>

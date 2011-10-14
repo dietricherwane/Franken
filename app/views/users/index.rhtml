@@ -1,0 +1,13 @@
+<%= form_for @user, :url => {:action => 'dispatcher' } do |f| %>
+  <div class="field">
+    <%= f.label 'Phone number' %><br />
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label 'Message' %><br />
+    <%= f.text_area :trash %>
+  </div>
+  <div class="actions">
+    <tr><td><%= f.submit 'Send' %></td></tr>
+  </div>
+<% end %>
