@@ -21,9 +21,8 @@ class UsersController < ApplicationController
         else
           send_error_message #means that the user doesn't exists
         end
-        #redirect_to send_message_path(@parameters)
-      #else
-        #send_error_message
+      else
+        send_error_message
       end
   end
 
