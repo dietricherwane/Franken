@@ -59,9 +59,9 @@ class ApplicationController < ActionController::Base
 
   def user_registered?(parameters)
     if User.find_by_phone_number(parameters).eql?(nil)
-      false
+      false 
     else
-      true
+      true #user is registered
     end
   end
 
@@ -73,13 +73,14 @@ class ApplicationController < ActionController::Base
   end
 
   def username_doesnt_exists?(parameters)
-    if User.find_by_username(parameters.split[1]).nil? #we do not split again because he has already been in "correct_registration_message?" function  and we are continuing with the same variable
+    if User.find_by_username(parameters.split[1]).nil?
       true
     end
   end
 
   def send_error_message
-    redirect_to(root_path, :notice => 'Error!')
+    #redirect_to(root_path, :notice => 'Error!')
+    #render :text => "Error!"
   end
 
 end

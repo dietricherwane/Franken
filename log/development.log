@@ -9394,3 +9394,774 @@ Started GET "/" for 127.0.0.1 at Fri Oct 14 13:34:28 -0700 2011
 [0m
 Rendered users/index.rhtml within layouts/application (38.6ms)
 Completed 200 OK in 61ms (Views: 43.4ms | ActiveRecord: 1.3ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /home/lalala/Desktop/rails_projects/franken/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 14 14:00:47 -0700 2011
+  [1m[36mSQL (3.3ms)[0m  [1mSET client_min_messages TO 'warning'[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW client_min_messages
+  [1m[36mSQL (0.2ms)[0m  [1mSET client_min_messages TO 'panic'[0m
+  [1m[35mSQL (0.2ms)[0m  SET standard_conforming_strings = on
+  [1m[36mSQL (0.1ms)[0m  [1mSET client_min_messages TO 'warning'[0m
+  [1m[35mSQL (9.9ms)[0m  SET time zone 'UTC'
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TIME ZONE[0m
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (7.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/index.rhtml within layouts/application (95.2ms)
+Completed 200 OK in 150ms (Views: 117.5ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:32:10 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (24.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered users/index.rhtml within layouts/application (38.6ms)
+Completed 200 OK in 120ms (Views: 62.2ms | ActiveRecord: 24.9ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:32:12 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>""}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:32:12 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (1.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/index.rhtml within layouts/application (113.7ms)
+Completed 200 OK in 130ms (Views: 118.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:32:18 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"fdfdf", "phone_number"=>""}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:32:18 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered users/index.rhtml within layouts/application (13.5ms)
+Completed 200 OK in 28ms (Views: 17.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/list_users" for 127.0.0.1 at Sat Oct 15 00:32:23 -0700 2011
+  Processing by UsersController#list_users as HTML
+  [1m[35mUser Load (53.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mSQL (2.2ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered users/list_users.rhtml within layouts/application (25.5ms)
+Completed 200 OK in 109ms (Views: 45.4ms | ActiveRecord: 55.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:32:28 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (1.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/index.rhtml within layouts/application (14.4ms)
+Completed 200 OK in 28ms (Views: 18.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:32:33 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:32:33 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (2.1ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered users/index.rhtml within layouts/application (85.5ms)
+Completed 200 OK in 101ms (Views: 90.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:32:45 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"tchat", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/create_user/7777/tchat
+Redirected to 
+Completed 500 Internal Server Error in 2ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/application_controller.rb:82:in `send_error_message'
+  app/controllers/users_controller.rb:25:in `dispatcher'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:34:29 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"tchat", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/create_user/7777/tchat
+Completed 302 Found in 1ms
+
+
+Started GET "/users/create_user/7777/tchat" for 127.0.0.1 at Sat Oct 15 00:34:29 -0700 2011
+  Processing by UsersController#create_user as HTML
+  Parameters: {"trash"=>"tchat", "phone_number"=>"7777"}
+  [1m[35mSQL (2.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (168.8ms)[0m  [1m SELECT tablename
+ FROM pg_tables
+ WHERE schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (18.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone_number" = 7777 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 211ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:34:30 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (1.2ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/index.rhtml within layouts/application (14.1ms)
+Completed 200 OK in 27ms (Views: 18.4ms | ActiveRecord: 192.4ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:34:32 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>""}}
+Completed 500 Internal Server Error in 27ms
+
+ActionView::MissingTemplate (Missing template users/dispatcher with {:formats=>[:html], :locale=>[:en, :en], :handlers=>[:rjs, :rhtml, :rxml, :builder, :erb]} in view paths "/home/lalala/Desktop/rails_projects/franken/app/views"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:35:38 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"tchat ff", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/create_user/7777/tchat%20ff
+Redirected to 
+Completed 500 Internal Server Error in 3ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/application_controller.rb:82:in `send_error_message'
+  app/controllers/users_controller.rb:25:in `dispatcher'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.7ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:36:26 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"tchat ff", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/create_user/7777/tchat%20ff
+Completed 302 Found in 2ms
+
+
+Started GET "/users/create_user/7777/tchat%20ff" for 127.0.0.1 at Sat Oct 15 00:36:26 -0700 2011
+  Processing by UsersController#create_user as HTML
+  Parameters: {"trash"=>"tchat ff", "phone_number"=>"7777"}
+  [1m[36mSQL (3.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.2ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone_number" = 7777 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:36:27 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (1.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/index.rhtml within layouts/application (13.3ms)
+Completed 200 OK in 28ms (Views: 19.1ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:36:29 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>""}}
+Completed 500 Internal Server Error in 7ms
+
+ActionView::MissingTemplate (Missing template users/dispatcher with {:formats=>[:html], :locale=>[:en, :en], :handlers=>[:rjs, :rhtml, :rxml, :builder, :erb]} in view paths "/home/lalala/Desktop/rails_projects/franken/app/views"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:37:10 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>""}}
+  [1m[36mSQL (2.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed 500 Internal Server Error in 80ms
+
+ActionView::MissingTemplate (Missing template users/dispatcher with {:formats=>[:html], :locale=>[:en, :en], :handlers=>[:rjs, :rhtml, :rxml, :builder, :erb]} in view paths "/home/lalala/Desktop/rails_projects/franken/app/views"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:37:24 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>""}}
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template users/dispatcher with {:formats=>[:html], :locale=>[:en, :en], :handlers=>[:rjs, :rhtml, :rxml, :builder, :erb]} in view paths "/home/lalala/Desktop/rails_projects/franken/app/views"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:39:50 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>""}}
+Rendered users/index.rhtml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <%= form_for @user, :url => {:action => 'dispatcher' } do |f| %>
+    2:   <div class="field">
+    3:     <%= f.label 'Phone number' %><br />
+    4:     <%= f.text_field :phone_number %>
+  app/views/users/index.rhtml:1:in `_app_views_users_index_rhtml__502958251__612987138_0'
+  app/controllers/users_controller.rb:25:in `dispatcher'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:41:27 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>""}}
+Rendered users/index.rhtml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <%= form_for @user, :url => {:action => 'dispatcher' } do |f| %>
+    2:   <div class="field">
+    3:     <%= f.label 'Phone number' %><br />
+    4:     <%= f.text_field :phone_number %>
+  app/views/users/index.rhtml:1:in `_app_views_users_index_rhtml__502958251__613778968_0'
+  app/controllers/users_controller.rb:25:in `dispatcher'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.3ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:42:06 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>""}}
+Completed 500 Internal Server Error in 5ms
+
+ActionView::MissingTemplate (Missing template users/nothing with {:formats=>[:html], :locale=>[:en, :en], :handlers=>[:rjs, :rhtml, :rxml, :builder, :erb]} in view paths "/home/lalala/Desktop/rails_projects/franken/app/views"):
+  app/controllers/users_controller.rb:25:in `dispatcher'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:43:08 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>""}}
+Rendered users/dispatcher.rhtml within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `redirect_to' for #<#<Class:0xb7051f74>:0xb7050ee4>):
+    1: <%= redirect_to(root_path) %>
+  app/views/users/dispatcher.rhtml:1:in `_app_views_users_dispatcher_rhtml___830983475__612205228_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:44:14 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (3.2ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/index.rhtml within layouts/application (14.7ms)
+Completed 200 OK in 31ms (Views: 19.2ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:44:15 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>""}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:44:16 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (1.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered users/index.rhtml within layouts/application (15.4ms)
+Completed 200 OK in 34ms (Views: 20.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:44:44 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"a?", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/register_area/7777/a%3F
+Redirected to 
+Completed 500 Internal Server Error in 2ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/application_controller.rb:82:in `send_error_message'
+  app/controllers/users_controller.rb:25:in `dispatcher'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:45:54 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (2.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/index.rhtml within layouts/application (15.6ms)
+Completed 200 OK in 32ms (Views: 20.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:45:55 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"a?", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/register_area/7777/a%3F
+Completed 500 Internal Server Error in 2ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/application_controller.rb:83:in `send_error_message'
+  app/controllers/users_controller.rb:25:in `dispatcher'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.5ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:46:23 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"a?", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/register_area/7777/a%3F
+Completed 302 Found in 1ms
+
+
+Started GET "/users/register_area/7777/a%3F" for 127.0.0.1 at Sat Oct 15 00:46:23 -0700 2011
+  Processing by UsersController#register_area as HTML
+  Parameters: {"trash"=>"a?", "phone_number"=>"7777"}
+  [1m[36mSQL (1.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone_number" = 7777 LIMIT 1[0m
+Completed 500 Internal Server Error in 18ms
+
+ActionView::MissingTemplate (Missing template users/register_area with {:formats=>[:html], :locale=>[:en, :en], :handlers=>[:rjs, :rhtml, :rxml, :builder, :erb]} in view paths "/home/lalala/Desktop/rails_projects/franken/app/views"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:49:04 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"", "phone_number"=>""}}
+Rendered users/dispatcher.rhtml within layouts/application (5.2ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:49:08 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (2.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/index.rhtml within layouts/application (76.1ms)
+Completed 200 OK in 93ms (Views: 80.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:49:19 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"tchat", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/create_user/7777/tchat
+Completed 302 Found in 1ms
+
+
+Started GET "/users/create_user/7777/tchat" for 127.0.0.1 at Sat Oct 15 00:49:19 -0700 2011
+  Processing by UsersController#create_user as HTML
+  Parameters: {"trash"=>"tchat", "phone_number"=>"7777"}
+  [1m[36mSQL (7.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (0.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone_number" = 7777 LIMIT 1[0m
+Rendered users/create_user.rhtml within layouts/application (3.9ms)
+Completed 200 OK in 26ms (Views: 8.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:49:21 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (2.2ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/index.rhtml within layouts/application (12.3ms)
+Completed 200 OK in 26ms (Views: 16.8ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:49:46 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"tchat lord f 21", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/create_user/7777/tchat%20lord%20f%2021
+Completed 302 Found in 1ms
+
+
+Started GET "/users/create_user/7777/tchat%20lord%20f%2021" for 127.0.0.1 at Sat Oct 15 00:49:46 -0700 2011
+  Processing by UsersController#create_user as HTML
+  Parameters: {"trash"=>"tchat lord f 21", "phone_number"=>"7777"}
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (0.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone_number" = 7777 LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'lord' LIMIT 1
+  [1m[36mSQL (5.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPK and serial sequence (250.3ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"users"'::regclass
+  [1m[36mSQL (87.2ms)[0m  [1mINSERT INTO "users" ("updated_at", "created_at", "username", "phone_number", "exclusion_list", "age", "trash", "gender", "area") VALUES ('2011-10-15 07:49:46.273879', '2011-10-15 07:49:46.273879', 'lord', 7777, NULL, 21, NULL, 'f', NULL) RETURNING "id"[0m
+  [1m[35mSQL (35.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 571ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:49:46 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered users/index.rhtml within layouts/application (81.2ms)
+Completed 200 OK in 94ms (Views: 85.3ms | ActiveRecord: 382.5ms)
+
+
+Started GET "/users/list_users" for 127.0.0.1 at Sat Oct 15 00:49:50 -0700 2011
+  Processing by UsersController#list_users as HTML
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mSQL (1.8ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered users/list_users.rhtml within layouts/application (12.9ms)
+Completed 200 OK in 28ms (Views: 15.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:49:53 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (1.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/index.rhtml within layouts/application (13.8ms)
+Completed 200 OK in 37ms (Views: 19.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/list_users" for 127.0.0.1 at Sat Oct 15 00:49:57 -0700 2011
+  Processing by UsersController#list_users as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/list_users.rhtml within layouts/application (13.0ms)
+Completed 200 OK in 27ms (Views: 16.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:50:00 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (1.4ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered users/index.rhtml within layouts/application (18.2ms)
+Completed 200 OK in 30ms (Views: 22.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:50:08 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"a?", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/register_area/7777/a%3F
+Completed 302 Found in 1ms
+
+
+Started GET "/users/register_area/7777/a%3F" for 127.0.0.1 at Sat Oct 15 00:50:08 -0700 2011
+  Processing by UsersController#register_area as HTML
+  Parameters: {"trash"=>"a?", "phone_number"=>"7777"}
+  [1m[35mSQL (1.2ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."phone_number" = 7777 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone_number" = 7777 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (22.5ms)[0m  [1mUPDATE "users" SET "updated_at" = '2011-10-15 07:50:08.269350', "area" = '' WHERE "users"."id" = 30[0m
+  [1m[35mSQL (15.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 61ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:50:08 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered users/index.rhtml within layouts/application (13.8ms)
+Completed 200 OK in 28ms (Views: 18.1ms | ActiveRecord: 42.2ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:50:19 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"a? cocody", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/register_area/7777/a%3F%20cocody
+Completed 302 Found in 1ms
+
+
+Started GET "/users/register_area/7777/a%3F%20cocody" for 127.0.0.1 at Sat Oct 15 00:50:19 -0700 2011
+  Processing by UsersController#register_area as HTML
+  Parameters: {"trash"=>"a? cocody", "phone_number"=>"7777"}
+  [1m[35mSQL (1.2ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."phone_number" = 7777 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone_number" = 7777 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE "users" SET "area" = 'cocody', "updated_at" = '2011-10-15 07:50:19.546670' WHERE "users"."id" = 30[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:50:19 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (2.1ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered users/index.rhtml within layouts/application (12.3ms)
+Completed 200 OK in 26ms (Views: 16.7ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/users/dispatcher" for 127.0.0.1 at Sat Oct 15 00:50:30 -0700 2011
+  Processing by UsersController#dispatcher as HTML
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"weIXrZ1acCszvcNql0KVMz7sB2aGckC9q1KZrMrYPGA=", "utf8"=>"✓", "user"=>{"trash"=>"20 89", "phone_number"=>"7777"}}
+Redirected to http://localhost:3000/users/search_user/7777/20%2089
+Completed 302 Found in 1ms
+
+
+Started GET "/users/search_user/7777/20%2089" for 127.0.0.1 at Sat Oct 15 00:50:30 -0700 2011
+  Processing by UsersController#search_user as HTML
+  Parameters: {"trash"=>"20 89", "phone_number"=>"7777"}
+  [1m[35mSQL (1.2ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."phone_number" = 7777 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone_number" = 7777 LIMIT 1[0m
+  [1m[35mUser Load (12.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."gender" = 'h' AND ("users"."age" BETWEEN 20 AND 89)
+Rendered users/search_user.rhtml within layouts/application (4.9ms)
+Completed 200 OK in 118ms (Views: 16.2ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/users/list_users" for 127.0.0.1 at Sat Oct 15 00:50:36 -0700 2011
+  Processing by UsersController#list_users as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Rendered users/list_users.rhtml within layouts/application (14.8ms)
+Completed 200 OK in 31ms (Views: 18.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Oct 15 00:50:50 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (1.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered users/index.rhtml within layouts/application (13.8ms)
+Completed 200 OK in 30ms (Views: 17.9ms | ActiveRecord: 1.6ms)
