@@ -8,6 +8,7 @@ Franken::Application.routes.draw do
   match 'users/search_user/:phone_number/:trash' => 'users#search_user', :as => :search_user
   match 'users/send_message/:phone_number/:trash' => 'users#send_message', :as => :send_message
   match 'users/list_users' => 'users#list_users', :as => :list_users
+  match 'containers/index/' => 'containers#index', :as => :containers
   resources :users
   resources :messages
   
